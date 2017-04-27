@@ -1,7 +1,7 @@
 // app.js
 
 const NYTBaseUrl = "https://api.nytimes.com/svc/topstories/v2/";
-const ApiKey = "4197a0cce3944c77a46687eda3973e0c";
+const ApiKey = "";
 const SECTIONS = "world, arts, automobiles, books, business, fashion, food";
 
 
@@ -10,7 +10,7 @@ function buildUrl (url) {
 }
 
 Vue.component('news-list', {
-    props: ['results'], 
+    props: ['results'],
     template: `
         <section>
             <div class="row" v-for="posts in processedPosts">
@@ -26,7 +26,7 @@ Vue.component('news-list', {
                         </strong> <br>
                         {{ post.abstract }}
                     </p>
-        
+
                 </div>
             </div>
         </div>
@@ -54,12 +54,12 @@ Vue.component('news-list', {
 
 
 const vm = new Vue({
-    el: '#app', 
+    el: '#app',
     data: {
-        results: [], 
-        sections: SECTIONS.split(', '), 
+        results: [],
+        sections: SECTIONS.split(', '),
         section: 'world',
-    }, 
+    },
     mounted() {
         this.getPosts(this.section);
     },

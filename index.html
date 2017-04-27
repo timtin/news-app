@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>NYT News reader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
-    <base href="http://timmartin.dev/news-app/"/>
+    <base href="/"/>
   </head>
   <body>
     <div class="container" id="app">
-        <h1 class="text-center">Top News from NYT</h1> 
+        <h1 class="text-center">Top News from NYT</h1>
 
         <section class="callout primary">
           <h5 class="text-center">Filter by Category</h5>
@@ -22,7 +22,7 @@
         </section>
 
         <news-list :results="results"></news-list>
-      
+
     </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
